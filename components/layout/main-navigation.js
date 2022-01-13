@@ -19,9 +19,6 @@ function MainNavigation() {
       </Link>
       <nav>
         <ul>
-          <li>
-          <Link href="/">All Jobs</Link>
-          </li>
           {!session && !loading && (
             <li>
               <Link href="/auth">Login</Link>
