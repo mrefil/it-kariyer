@@ -22,9 +22,10 @@ function AuthForm() {
   const emailInputRef = useRef();
   const passwordInputRef = useRef();
   const [isLogin, setIsLogin] = useState(true);
+
   const router = useRouter();
   function switchAuthModeHandler() {
-    setIsLogin((prevState) => !prevState);
+    setIsLogin(prevState => !prevState);
   }
 
   async function submitHandler(event) {
@@ -33,10 +34,7 @@ function AuthForm() {
     const enteredEmail = emailInputRef.current.value;
     const enteredPassword = passwordInputRef.current.value;
 
-    // optional: Add validation
-
     if (isLogin) {
-      // log user in
       const result = await signIn('credentials', {
         redirect: false,
         email: enteredEmail,
@@ -44,7 +42,6 @@ function AuthForm() {
       });
 
       if(!result.error) {
-        // set some auth state
         router.replace('profile');
       }
 
