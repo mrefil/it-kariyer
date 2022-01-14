@@ -1,4 +1,10 @@
+You can contribute to this project.
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+## Purpose of this project
+
+One page job postings career page for companies. You can apply to current job postings by creating an account. Members can add CV. The company can prepare a special assigment for the members and assign them to the members. So you can measure the experience of applicants.
 
 ## Getting Started
 

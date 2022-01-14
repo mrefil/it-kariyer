@@ -1,8 +1,15 @@
-import Sidebar from "../layout/sidebar";
+import classes from './profile.module.css';
 
 function Profile() {
     return (
-        <h1>Profile Main Page</h1>
+        <section className={classes.profile}>
+            <div className={classes.form_wrapper}>
+                <div className={classes.wrapper}>
+                    <h1>Welcome</h1>
+                    <p>Welcome to job portal! You can apply open jobs, update your CV and attend assigment that provided for you!</p>
+                </div>
+            </div>
+        </section>
     )
 }
 
