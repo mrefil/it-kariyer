@@ -12,13 +12,13 @@ function Sidebar() {
                         <Link href="/profile">Profile</Link>
                     </li>
                     <li>
-                        Applied Job
+                        <Link href="/profile/applied-job">Applied Job</Link>
                     </li>
                     <li>
-                        Assigment
+                        <Link href="/profile/assigment">Assigment</Link>
                     </li>
                     <li>
-                        CV
+                        <Link href="/profile/cv">CV</Link>
                     </li>
                     <li>
                         <Link href="/profile/change-password">Change Password</Link>
