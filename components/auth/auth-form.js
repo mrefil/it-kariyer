@@ -62,31 +62,31 @@ function AuthForm() {
           <div className={classes.form_label}>
             <h1>{isLogin ? "Login" : "Sign Up"}</h1>
           </div>
-      <form onSubmit={submitHandler}>
-        <div className={classes.control}>
-          <input type="email" id="email" placeholder="Email" required ref={emailInputRef} />
+          <form onSubmit={submitHandler}>
+            <div className={classes.control}>
+              <input type="email" id="email" placeholder="Email" required ref={emailInputRef} />
+            </div>
+            <div className={classes.control}>
+              <input
+                type="password"
+                id="password"
+                placeholder="Password"
+                required
+                ref={passwordInputRef}
+              />
+            </div>
+            <div className={classes.actions}>
+              <button>{isLogin ? "Login" : "Create Account"}</button>
+              <button
+                type="button"
+                className={classes.toggle}
+                onClick={switchAuthModeHandler}
+              >
+                {isLogin ? "Create new account" : "Login with existing account"}
+              </button>
+            </div>
+          </form>
         </div>
-        <div className={classes.control}>
-          <input
-            type="password"
-            id="password"
-            placeholder="Password"
-            required
-            ref={passwordInputRef}
-          />
-        </div>
-        <div className={classes.actions}>
-          <button>{isLogin ? "Login" : "Create Account"}</button>
-          <button
-            type="button"
-            className={classes.toggle}
-            onClick={switchAuthModeHandler}
-          >
-            {isLogin ? "Create new account" : "Login with existing account"}
-          </button>
-        </div>
-      </form>
-      </div>
       </div>
     </section>
   );
