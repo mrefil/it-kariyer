@@ -1,8 +1,16 @@
 import { getSession } from "next-auth/client";
 import UserProfile from "../components/profile/user-profile";
+import Profile from "../components/profile/profile";
+import Sidebar from "../components/layout/sidebar";
+import { Fragment } from "react/cjs/react.production.min";
 
 function ProfilePage() {
-  return <UserProfile />;
+  return (
+    <Fragment>
+      <Sidebar />
+      <Profile />
+    </Fragment>
+  );
 }
 
 export async function getServerSideProps(context) {
