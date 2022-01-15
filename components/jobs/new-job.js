@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import classes from './new-job.module.css';
 
 function NewJob(props) {
     const titleRef = useRef();
@@ -34,39 +35,40 @@ function NewJob(props) {
     }
 
     return (
+      <section className={classes.auth}>
+      <div className={classes.form_wrapper}>
+        <div className={classes.wrapper}>
         <form onSubmit={sendJobHandler}>
           <div>
-            <div>
-              <label htmlFor='title'>Your title</label>
-              <input type='text' id='title' ref={titleRef} />
+            <div className={classes.control}>
+              <input type='text' id='title' ref={titleRef} placeholder="Title" />
             </div>
-            <div>
-              <label htmlFor='type'>Your type</label>
-              <input type='text' id='type' ref={typeRef} />
+            <div className={classes.control}>
+              <input type='text' id='type' ref={typeRef} placeholder="Job Type" />
             </div>
-            <div>
-              <label htmlFor='category'>Your category</label>
-              <input type='text' id='category' ref={categoryRef} />
+            <div className={classes.control}>
+              <input type='text' id='category' ref={categoryRef} placeholder="Category" />
             </div>
-            <div>
-              <label htmlFor='department'>Your department</label>
-              <input type='text' id='department' ref={departmantRef} />
+            <div className={classes.control}>
+              <input type='text' id='department' ref={departmantRef} placeholder="Job Department" />
             </div>
-            <div>
-              <label htmlFor='location'>Your location</label>
-              <input type='text' id='location' ref={locationRef} />
+            <div className={classes.control}>
+              <input type='text' id='location' ref={locationRef} placeholder="Location" />
             </div>
           </div>
-          <div>
-            <label htmlFor='excerpt'>Your short text</label>
-            <textarea id='excerpt' rows='5' ref={excerptRef}></textarea>
+          <div className={classes.control}>
+            <textarea id='excerpt' rows='5' ref={excerptRef} placeholder="Short Description"></textarea>
           </div>
-          <div>
-            <label htmlFor='description'>Your description</label>
-            <textarea id='description' rows='5' ref={descriptionRef}></textarea>
+          <div className={classes.control}>
+            <textarea id='description' rows='5' ref={descriptionRef} placeholder="Description"></textarea>
           </div>
-          <button>Submit</button>
+          <div className={classes.actions}>
+            <button>Submit</button>
+          </div>
         </form>
+        </div>
+      </div>
+    </section>
       );
 }
 

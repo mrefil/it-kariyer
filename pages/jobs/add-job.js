@@ -1,3 +1,4 @@
+import { getSession } from 'next-auth/client';
 import {useRouter} from 'next/router';
 import NewJob from "../../components/jobs/new-job";
 
@@ -17,8 +18,28 @@ function AddJob() {
     }
 
     return(
+        
         <NewJob onAddJobs={addJobHandler} />
     )
 }
+
+export async function getServerSideProps(context) {
+    const session = await getSession({ req: context.req });
+
+    if (!session) {
+      return {
+        redirect: {
+          destination: "/auth",
+          permanent: false,
+        },
+      };
+    }
+  
+    return {
+      props: {
+        session,
+      },
+    };
+  }
 
 export default AddJob;
