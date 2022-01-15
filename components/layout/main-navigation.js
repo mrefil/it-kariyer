@@ -26,6 +26,11 @@ function MainNavigation() {
           )}
           {session && (
             <li>
+              <Link href="/jobs/add-job">Add Job</Link>
+            </li>
+          )}
+          {session && (
+            <li>
               <Link href="/profile">Profile</Link>
             </li>
           )}
