@@ -1,7 +1,8 @@
+import JobItem from "./JobItem";
 import styles from "./JobList.module.css";
 
-function JobList() {
-
+function JobList(props) {
+    console.log(props);
   return (
     <div>
       <div className={styles.hero}>
@@ -18,53 +19,9 @@ function JobList() {
       <div className={styles.jobs}>
         <div className={styles.wrapper}>
           <div className={styles.jobsList}>
-            <div className={styles.job}>
-              <div className={styles.partTime}>Full Time</div>
-              {/* <Image src={dribble} alt="dribble logo" /> */}
-              <p>May, 11 2021</p>
-              <h2>Customer Support Agent</h2>
-              {/* <div className={styles.description}>
-                <div>$40,000 - $200,000/year</div>
-                <div>/</div>
-                <div>Remote</div>
-                <div>/</div>
-                <div>Project Management</div>
-                <div>/</div>
-                <div>Full Time</div>
-              </div> */}
-              <button>Apply For Job</button>
-            </div>
-            <div className={styles.job}>
-              <div className={styles.partTime}>Full Time</div>
-              <p>May, 11 2021</p>
-              <h2>General Ledger Accountant</h2>
-              <button>Apply For Job</button>
-            </div>
-            <div className={styles.job}>
-              <div className={styles.partTime}>Part Time</div>
-              <p>May, 11 2021</p>
-              <h2>Senior Product Designer</h2>
-              <button>Apply For Job</button>
-            </div>
-            <div className={styles.job}>
-              <div className={styles.partTime}>Full Time</div>
-              <p>May, 11 2021</p>
-              <h2>Product Manager</h2>
-              <button>Apply For Job</button>
-            </div>
-            <div className={styles.job}>
-              <div className={styles.partTime}>Full Time</div>
-              <p>May, 11 2021</p>
-              <h2>Software Engineer</h2>
-              <button>Apply For Job</button>
-            </div>
-            <div className={styles.job}>
-              <div className={styles.partTime}>Full Time</div>
-              <div className={styles.featured}>Featured</div>
-              <p>May, 11 2021</p>
-              <h2>Senior Product Designer</h2>
-              <button>Apply For Job</button>
-            </div>
+            {props.jobs.map((job) => (
+                <JobItem key={job.id} id={job.id} title={job.title} location={job.location} />
+            ))}
           </div>
         </div>
       </div>
