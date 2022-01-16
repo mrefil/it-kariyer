@@ -1,6 +1,6 @@
-import styles from "./starting-page.module.css";
+import styles from "./JobList.module.css";
 
-function StartingPageContent() {
+function JobList() {
 
   return (
     <div>
@@ -72,4 +72,4 @@ function StartingPageContent() {
   );
 }
 
-export default StartingPageContent;
+export default JobList;
