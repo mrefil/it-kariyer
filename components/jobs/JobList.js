@@ -20,7 +20,7 @@ function JobList(props) {
         <div className={styles.wrapper}>
           <div className={styles.jobsList}>
             {props.jobs.map((job) => (
-                <JobItem key={job.id} id={job.id} title={job.title} location={job.location} />
+                <JobItem key={job.id} id={job.id} title={job.title} location={job.location} type={job.type} />
             ))}
           </div>
         </div>
