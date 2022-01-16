@@ -10,7 +10,7 @@ function JobItem(props) {
     
   return (
     <div className={styles.job}>
-        <div className={styles.partTime}>Full Time</div>
+        <div className={styles.partTime}>{props.type}</div>
         <div className={styles.featured}>Featured</div>
         <p>{props.location}</p>
         <h2>{props.title}</h2>

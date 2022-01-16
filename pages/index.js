@@ -34,6 +34,7 @@ export async function getStaticProps() {
         title: job.title,
         location: job.location,
         description: job.description,
+        type: job.type,
         id: job._id.toString(),
       })),
     },
