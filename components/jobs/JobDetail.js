@@ -7,7 +7,7 @@ function JobDetail(props) {
         <div className={classes.wrapper}>
           <h1>{props.title}</h1>
           <address>{props.location}</address>
-          <p>{props.description}</p>
+          <p className={classes.text}>{props.description}</p>
           <div className={classes.actions}>
             <button>Apply For Job</button>
           </div>

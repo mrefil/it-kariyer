@@ -25,7 +25,7 @@ export async function getStaticPaths() {
   const db = client.db();
 
   const jobsCollection = db.collection("jobs");
-  const jobs = await jobsCollection.find({}, {_id: 1}).toArray();
+  const jobs = await jobsCollection.find().toArray();
   client.close();
 
   return {

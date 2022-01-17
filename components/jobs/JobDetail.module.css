@@ -182,6 +182,10 @@
     text-align: left;
     padding: 0.25rem;
   }
+
+  .text {
+      text-align: left;
+  }
   
   .actions {
     margin-top: 1.5rem;
