@@ -14,7 +14,9 @@ function JobItem(props) {
         <div className={styles.featured}>Featured</div>
         <p>{props.location}</p>
         <h2>{props.title}</h2>
+        <div className={styles.actions}>
         <button onClick={showDetailsHandler}>Apply For Job</button>
+          </div>
     </div>
   );
 }

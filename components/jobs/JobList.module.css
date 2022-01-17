@@ -391,3 +391,37 @@
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(52, 107, 83, 0.4)), to(rgba(28, 74, 54, 0.452)));
     background-image: linear-gradient(180deg, rgba(52, 107, 83, 0.4), rgba(28, 74, 54, 0.452));
   }
+
+  .actions {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .actions button {
+    cursor: pointer;
+    font: inherit;
+    color: white;
+    background-color: #008763;
+    border: 1px solid #008763;
+    border-radius: 4px;
+    padding: 0.5rem 2.5rem;
+  }
+  
+  .actions button:hover {
+    opacity: 0.6;
+  }
+  
+  .actions .toggle {
+    margin-top: 1rem;
+    background-color: transparent;
+    color: #000000;
+    border: none;
+    padding: 0.15rem 1.5rem;
+  }
+  
+  .actions .toggle:hover {
+    background-color: transparent;
+    opacity: 0.8;
+  }

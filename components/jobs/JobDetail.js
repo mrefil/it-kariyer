@@ -1,11 +1,18 @@
-
+import classes from "./JobDetail.module.css";
 
 function JobDetail(props) {
   return (
-    <section>
-      <h1>{props.title}</h1>
-      <address>{props.location}</address>
-      <p>{props.description}</p>
+    <section className={classes.auth}>
+      <div className={classes.form_wrapper}>
+        <div className={classes.wrapper}>
+          <h1>{props.title}</h1>
+          <address>{props.location}</address>
+          <p>{props.description}</p>
+          <div className={classes.actions}>
+            <button>Apply For Job</button>
+          </div>
+        </div>
+      </div>
     </section>
   );
 }
