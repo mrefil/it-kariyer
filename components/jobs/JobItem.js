@@ -2,6 +2,7 @@ import {useRouter} from 'next/router';
 import styles from './JobList.module.css';
 
 function JobItem(props) {
+  console.log("Item", props);
     const router = useRouter();
 
     function showDetailsHandler() {
@@ -15,8 +16,8 @@ function JobItem(props) {
         <p>{props.location}</p>
         <h2>{props.title}</h2>
         <div className={styles.actions}>
-        <button onClick={showDetailsHandler}>Apply For Job</button>
-          </div>
+          <button onClick={showDetailsHandler}>Apply For Job</button>
+        </div>
     </div>
   );
 }
