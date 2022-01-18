@@ -2,7 +2,6 @@ import {useRouter} from 'next/router';
 import styles from './JobList.module.css';
 
 function JobItem(props) {
-  console.log("Item", props);
     const router = useRouter();
 
     function showDetailsHandler() {
